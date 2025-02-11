@@ -1,0 +1,768 @@
+{
+	"info": {
+		"_postman_id": "304805af-92e6-4e26-b6c7-15a227eb7e9a",
+		"name": "TestTaskRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37127415"
+	},
+	"item": [
+		{
+			"name": "Получить сообщения",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/GetMessages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"GetMessages"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "User1",
+							"description": "Имя пользователя",
+							"disabled": true
+						},
+						{
+							"key": "periodFrom",
+							"value": "2025-02-10 15:00",
+							"description": "Дата и время с какого периода начинается поиск сообщений",
+							"disabled": true
+						},
+						{
+							"key": "periodTo",
+							"value": "2025-02-11 8:28",
+							"description": "Дата и время до какого периода начинается поиск сообщений",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"description": "Без параметров запрос отправит все сообщения",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Получение всех сообщений",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/GetMessages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"GetMessages"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "User2",
+									"description": "Имя пользователя",
+									"disabled": true
+								},
+								{
+									"key": "periodFrom",
+									"value": "2025-02-10 15:00",
+									"description": "Дата и время с какого периода начинается поиск сообщений",
+									"disabled": true
+								},
+								{
+									"key": "periodTo",
+									"value": "2025-02-11 8:28",
+									"description": "Дата и время до какого периода начинается поиск сообщений",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"description": "Без параметров запрос отправит все сообщения",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 08:37:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"body\": \"New message\",\n        \"dateTime\": \"2025-02-11T08:27:59.011212Z\",\n        \"userId\": 1,\n        \"user\": null\n    },\n    {\n        \"id\": 3,\n        \"body\": \"Olala\",\n        \"dateTime\": \"2025-02-11T08:28:17.384216Z\",\n        \"userId\": 2,\n        \"user\": null\n    },\n    {\n        \"id\": 4,\n        \"body\": \"User3 has been connected to message server\",\n        \"dateTime\": \"2025-02-11T08:29:08.92986Z\",\n        \"userId\": 3,\n        \"user\": null\n    },\n    {\n        \"id\": 1,\n        \"body\": \"This is the first message\",\n        \"dateTime\": \"2025-02-09T12:34:50.658Z\",\n        \"userId\": 1,\n        \"user\": null\n    }\n]"
+				},
+				{
+					"name": "Получение сообщений от определённого пользователя",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/GetMessages?username=User2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"GetMessages"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "User2",
+									"description": "Имя пользователя"
+								},
+								{
+									"key": "periodFrom",
+									"value": "2025-02-10 15:00",
+									"description": "Дата и время с какого периода начинается поиск сообщений",
+									"disabled": true
+								},
+								{
+									"key": "periodTo",
+									"value": "2025-02-11 8:28",
+									"description": "Дата и время до какого периода начинается поиск сообщений",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"description": "Без параметров запрос отправит все сообщения",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 08:52:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"body\": \"Olala\",\n        \"dateTime\": \"2025-02-11T08:28:17.384216Z\",\n        \"userId\": 2,\n        \"user\": null\n    }\n]"
+				},
+				{
+					"name": "Получение сообщений, отправленных с какого-то периода",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/GetMessages?periodFrom=2025-02-10 15:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"GetMessages"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "User2",
+									"description": "Имя пользователя",
+									"disabled": true
+								},
+								{
+									"key": "periodFrom",
+									"value": "2025-02-10 15:00",
+									"description": "Дата и время с какого периода начинается поиск сообщений"
+								},
+								{
+									"key": "periodTo",
+									"value": "2025-02-11 8:28",
+									"description": "Дата и время до какого периода начинается поиск сообщений",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"description": "Без параметров запрос отправит все сообщения",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 08:53:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"body\": \"New message\",\n        \"dateTime\": \"2025-02-11T08:27:59.011212Z\",\n        \"userId\": 1,\n        \"user\": null\n    },\n    {\n        \"id\": 3,\n        \"body\": \"Olala\",\n        \"dateTime\": \"2025-02-11T08:28:17.384216Z\",\n        \"userId\": 2,\n        \"user\": null\n    },\n    {\n        \"id\": 4,\n        \"body\": \"User3 has been connected to message server\",\n        \"dateTime\": \"2025-02-11T08:29:08.92986Z\",\n        \"userId\": 3,\n        \"user\": null\n    }\n]"
+				},
+				{
+					"name": "Получение сообщений, отправленных до какого-то периода",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/GetMessages?periodTo=2025-02-11 8:28",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"GetMessages"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "User2",
+									"description": "Имя пользователя",
+									"disabled": true
+								},
+								{
+									"key": "periodFrom",
+									"value": "2025-02-10 15:00",
+									"description": "Дата и время с какого периода начинается поиск сообщений",
+									"disabled": true
+								},
+								{
+									"key": "periodTo",
+									"value": "2025-02-11 8:28",
+									"description": "Дата и время до какого периода начинается поиск сообщений"
+								},
+								{
+									"key": "",
+									"value": "",
+									"description": "Без параметров запрос отправит все сообщения",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 08:53:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"body\": \"New message\",\n        \"dateTime\": \"2025-02-11T08:27:59.011212Z\",\n        \"userId\": 1,\n        \"user\": null\n    },\n    {\n        \"id\": 1,\n        \"body\": \"This is the first message\",\n        \"dateTime\": \"2025-02-09T12:34:50.658Z\",\n        \"userId\": 1,\n        \"user\": null\n    }\n]"
+				},
+				{
+					"name": "Получение сообщений, отправленных с какого-то до какого-то периода",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/GetMessages?periodFrom=2025-02-10 15:00&periodTo=2025-02-11 8:28",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"GetMessages"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "User2",
+									"description": "Имя пользователя",
+									"disabled": true
+								},
+								{
+									"key": "periodFrom",
+									"value": "2025-02-10 15:00",
+									"description": "Дата и время с какого периода начинается поиск сообщений"
+								},
+								{
+									"key": "periodTo",
+									"value": "2025-02-11 8:28",
+									"description": "Дата и время до какого периода начинается поиск сообщений"
+								},
+								{
+									"key": "",
+									"value": "",
+									"description": "Без параметров запрос отправит все сообщения",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 08:54:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"body\": \"New message\",\n        \"dateTime\": \"2025-02-11T08:27:59.011212Z\",\n        \"userId\": 1,\n        \"user\": null\n    }\n]"
+				},
+				{
+					"name": "Получение сообщений, отправленных с какого-то до какого-то периода от конкретного пользователя",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/GetMessages?username=User1&periodFrom=2025-02-10 15:00&periodTo=2025-02-11 8:28",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"GetMessages"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "User1",
+									"description": "Имя пользователя"
+								},
+								{
+									"key": "periodFrom",
+									"value": "2025-02-10 15:00",
+									"description": "Дата и время с какого периода начинается поиск сообщений"
+								},
+								{
+									"key": "periodTo",
+									"value": "2025-02-11 8:28",
+									"description": "Дата и время до какого периода начинается поиск сообщений"
+								},
+								{
+									"key": "",
+									"value": "",
+									"description": "Без параметров запрос отправит все сообщения",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 08:55:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"body\": \"New message\",\n        \"dateTime\": \"2025-02-11T08:27:59.011212Z\",\n        \"userId\": 1,\n        \"user\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Отправить сообщение",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"body\": \"Test message\", //Message body\r\n  \"userId\": 3 //Sender (user ID)\r\n}\r\n//Дата и время устанавливаются автоматически. DateTime.Now()",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Messages"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Отправка сообщения",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"body\": \"Test message\", //Message body\r\n  \"userId\": 3 //Sender (user ID)\r\n}\r\n//Дата и время устанавливаются автоматически. DateTime.Now()",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Messages"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 08:32:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:8080/Messages/5"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"body\": \"Test message\",\n    \"dateTime\": \"2025-02-11T08:32:55.7886453Z\",\n    \"userId\": 3,\n    \"user\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Обновить сообщение",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 3, //Message ID\r\n  \"body\": \"Alala\", //Message body\r\n  \"dateTime\": \"2025-02-11T08:28:17.384216Z\", //Message date and time\r\n  \"userId\": 2, //Sender (user ID)\r\n  \"user\": { // Ниже поля можно не заполнять. Они ни на что не влияют. Но без них не позволяет обновить данные\r\n    \"id\": 0, \r\n    \"username\": \"string\", \r\n    \"password\": \"string\",\r\n    \"first_Name\": \"string\",\r\n    \"last_Name\": \"string\",\r\n    \"messages\": [] //Список должен быть пустым\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Messages/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Messages",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Обновление сообщения",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 3, //Message ID\r\n  \"body\": \"Alala\", //Message body\r\n  \"dateTime\": \"2025-02-11T08:28:17.384216Z\", //Message date and time\r\n  \"userId\": 2, //Sender (user ID)\r\n  \"user\": { // Ниже поля можно не заполнять. Они ни на что не влияют. Но без них не позволяет обновить данные\r\n    \"id\": 0, \r\n    \"username\": \"string\", \r\n    \"password\": \"string\",\r\n    \"first_Name\": \"string\",\r\n    \"last_Name\": \"string\",\r\n    \"messages\": [] //Список должен быть пустым\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Messages/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Messages",
+								"3"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 08:31:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Удалить сообщение",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Messages/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Messages",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Удаление сообщения",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Messages/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Messages",
+								"5"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 08:33:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Получить пользователей",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Список пользователей",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 08:27:11 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"username\": \"User1\",\n        \"password\": \"AQAAAAIAAYagAAAAEJ7ANjdYM82LiduQyGLm5K1cJx7yffbQGWoBQTq0DjveT761wDTJxZDW3aCb7m/H1w==\",\n        \"first_Name\": \"Name1\",\n        \"last_Name\": \"Surname1\",\n        \"messages\": []\n    },\n    {\n        \"id\": 2,\n        \"username\": \"User2\",\n        \"password\": \"AQAAAAIAAYagAAAAEIk42/LmMzwOF4k3ZG9k2COp9k6PfSyifKstgRi2FV6k5dkVfok3sv3MIGfXuho/qA==\",\n        \"first_Name\": \"Name2\",\n        \"last_Name\": \"Surname2\",\n        \"messages\": []\n    },\n    {\n        \"id\": 3,\n        \"username\": \"User3\",\n        \"password\": \"AQAAAAIAAYagAAAAEIkeJO3eFOOdMnRTFRd4cH7x203zWryw7aQLS9hUZr6YcHeWif5+uTDrIIO3F8n6WA==\",\n        \"first_Name\": \"Name3\",\n        \"last_Name\": \"Surname3\",\n        \"messages\": []\n    }\n]"
+				}
+			]
+		}
+	]
+}
